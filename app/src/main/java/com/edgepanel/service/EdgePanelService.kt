@@ -355,7 +355,7 @@ class EdgePanelService : Service() {
                             Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT or
                              Intent.FLAG_ACTIVITY_MULTIPLE_TASK
                         )
-                        val options = android.app.ActivityOptions.makeFreeformAnimation()
+                        val options = ActivityOptions.makeBasic().also { it.launchWindowingMode = 5 }
                         try {
                              startActivity(launchIntent, options.toBundle())
                         } catch (e: Exception) {
