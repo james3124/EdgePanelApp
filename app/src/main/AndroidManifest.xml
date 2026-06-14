@@ -15,6 +15,12 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FREEFORM_WINDOW_MANAGEMENT"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
