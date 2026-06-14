@@ -34,7 +34,7 @@ class EdgePanelService : Service() {
     private val PANEL_HEIGHT_NORMAL = 600
     private val PANEL_HEIGHT_MAX = 700
 
-    override fun onBind(intent: IBinder?): IBinder? = null
+    override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onCreate() {
         super.onCreate()
