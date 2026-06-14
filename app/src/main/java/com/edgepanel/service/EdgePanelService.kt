@@ -349,10 +349,23 @@ class EdgePanelService : Service() {
                 appView.findViewById<ImageView>(R.id.app_icon)?.setImageDrawable(icon)
                 appView.findViewById<TextView>(R.id.app_name)?.text = name
                 appView.setOnClickListener {
-                    val launchIntent = pm.getLaunchIntentForPackage(pkg)
-                    launchIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    startActivity(launchIntent)
-                    hidePanel()
+                        val launchIntent = pm.getLaunchIntentForPackage(pkg)
+                            launchIntent?.addFlags(
+                                        Intent.FLAG_ACTIVITY_NEW_TASK or
+                                                Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT or
+                                                        Intent.FLAG_ACTIVITY_MULTIPLE_TASK
+                            )
+                                val options = android.app.ActivityOptions.makeFreeformAnimation()
+                                    try {
+                                                startActivity(launchIntent, options.toBundle())
+                                    } catch (e: Exception) {
+                                                startActivity(launchIntent)
+                                    }
+                                        hidePanel()
+                }
+                                    }
+                                    }
+                            )
                 }
                 val lp = GridLayout.LayoutParams().apply {
                     width = dpToPx(72f).toInt()
