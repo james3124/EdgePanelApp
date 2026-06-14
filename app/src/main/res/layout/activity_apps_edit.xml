@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <EditText
+        android:id="@+id/et_search_apps"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Search apps…"
+        android:hintTextColor="#555"
+        android:textColor="#FFF"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#1E1E1E"
+        android:inputType="text"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_apps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btn_save_apps"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Save"
+        android:backgroundTint="#3D5AFE"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

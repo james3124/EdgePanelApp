@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_handle_settings.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Position" android:textColor="#AAAAAA" android:textSize="12sp"
+            android:textAllCaps="true" android:layout_marginBottom="8dp"/>
+
+        <RadioGroup android:id="@+id/rg_position" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            <RadioButton android:id="@+id/rb_left" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Left"
+                android:textColor="#FFFFFF" android:buttonTint="#3D5AFE" android:layout_marginEnd="24dp"/>
+            <RadioButton android:id="@+id/rb_right" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Right"
+                android:textColor="#FFFFFF" android:buttonTint="#3D5AFE"/>
+        </RadioGroup>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="28dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Lock handle position"
+                android:textColor="#FFFFFF" android:textSize="15sp"/>
+            <Switch android:id="@+id/switch_lock" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:thumbTint="#3D5AFE" android:trackTint="#333366"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Style" android:textColor="#AAAAAA" android:textSize="12sp"
+            android:textAllCaps="true" android:layout_marginBottom="12dp"/>
+        <LinearLayout android:id="@+id/color_grid" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:layout_marginBottom="28dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Transparency" android:textColor="#AAAAAA" android:textSize="12sp"
+            android:textAllCaps="true" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Low" android:textColor="#888888" android:textSize="12sp" android:layout_marginEnd="8dp"/>
+            <SeekBar android:id="@+id/seek_transparency" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:progressTint="#3D5AFE" android:thumbTint="#3D5AFE" android:max="100"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="High" android:textColor="#888888" android:textSize="12sp" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Size" android:textColor="#AAAAAA" android:textSize="12sp"
+            android:textAllCaps="true" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Small" android:textColor="#888888" android:textSize="12sp" android:layout_marginEnd="8dp"/>
+            <SeekBar android:id="@+id/seek_size" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:progressTint="#3D5AFE" android:thumbTint="#3D5AFE" android:max="100"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Large" android:textColor="#888888" android:textSize="12sp" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Width" android:textColor="#AAAAAA" android:textSize="12sp"
+            android:textAllCaps="true" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Thin" android:textColor="#888888" android:textSize="12sp" android:layout_marginEnd="8dp"/>
+            <SeekBar android:id="@+id/seek_width" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:progressTint="#3D5AFE" android:thumbTint="#3D5AFE" android:max="100"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Thick" android:textColor="#888888" android:textSize="12sp" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_save_handle" android:layout_width="match_parent"
+            android:layout_height="52dp" android:text="Save" android:backgroundTint="#3D5AFE"
+            android:textColor="#FFFFFF" android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>
