@@ -271,7 +271,8 @@ class EdgePanelService : Service() {
                     )
                     try {
                         val options = ActivityOptions.makeBasic()
-                        options.launchWindowingMode = 5 // WINDOWING_MODE_FREEFORM
+                        val method = options.javaClass.getMethod("setLaunchWindowingMode", Int::class.java)
+                        method.invoke(options, 5)
                         startActivity(launchIntent, options.toBundle())
                     } catch (e: Exception) {
                         startActivity(launchIntent)
